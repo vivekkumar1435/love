@@ -41,24 +41,25 @@
 
     <h1>🎁 Gift Inside</h1>
 
+    <!-- 🎵 Hidden Music -->
+    <audio id="bgMusic">
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
     <button class="open-btn">Open the Gift</button>
 
     <h1 class="big-msg" id="loveMessage">
         I <span class="red">Love</span> You ❤️ Rani <img src="./img.jpg" alt="Love image">
-            <audio autoplay loop controls hidden  >
-  <source src="./song.mp3" type="audio/mpeg">
-</audio>
     </h1>
-
 
     <script>
         const btn = document.querySelector(".open-btn");
         const message = document.getElementById('loveMessage');
-       
-        btn.addEventListener("click", () => {
-            message.style.display = "block";
-          
+        const music = document.getElementById('bgMusic');
 
+        btn.addEventListener("click", () => {
+            message.style.display = "block";   
+            music.play();   // 🎵 Play music when button clicked
         });
     </script>
 
