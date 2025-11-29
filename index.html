@@ -11,6 +11,9 @@
             font-family: Arial, sans-serif;
             margin-top: 80px;
         }
+        div{
+            display:none;
+        }
         h1 {
             font-size: 40px;
         }
@@ -43,16 +46,18 @@
     <h1 class="big-msg" id="loveMessage">
         I <span class="red">Love</span> You ❤️ Rani <img src="./img.jpg" alt="Love image">
     </h1>
-    <audio autoplay loop controls hidden >
+    <div class="songplay" ><audio autoplay loop controls hidden  >
   <source src="./song.mp3" type="audio/mpeg">
-</audio>
+</audio></div>
 
     <script>
         const btn = document.querySelector(".open-btn");
         const message = document.getElementById('loveMessage');
-
+        const sonng = document.querySelector('.songplay')
         btn.addEventListener("click", () => {
             message.style.display = "block";
+            sonng.style.display = "block";
+
         });
     </script>
 
