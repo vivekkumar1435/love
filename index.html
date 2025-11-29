@@ -37,7 +37,7 @@
 
 <body>
 
-    <h1>🎁 Gift Inside</h1>
+    <h1 id="gift">🎁 Gift Inside</h1>
 
     <!-- 🎵 Hidden Music -->
     <audio id="bgMusic">
@@ -54,11 +54,14 @@
         const btn = document.querySelector(".open-btn");
         const message = document.getElementById('loveMessage');
         const music = document.getElementById('bgMusic');
+        const heading = document.getElementById('gift');
 
         btn.addEventListener("click", () => {
             message.style.display = "block";   
             music.play();   // 🎵 Play music when button clicked
             btn.style.display  = 'none';
+            heading.innerText = 'Welcome to my Heart'
+
         });
     </script>
 
